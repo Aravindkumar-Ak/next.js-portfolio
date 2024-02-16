@@ -5,7 +5,7 @@ import web3 from "../../../public/Assets/Mysql.png"
 import web4 from "../../../public/Assets/Mongodb.png"
 import web5 from "../../../public/Assets/Html.png"
 import web6 from "../../../public/Assets/css.png"
-import web7 from "../../../public/Assets/Javascript.png"
+import web7 from "../../../public/Assets/Tailwind.png"
 import web8 from "../../../public/Assets/React.png"
 import Image from 'next/image'
 const TechStack = () => {
