@@ -15,6 +15,7 @@ const Projects = () => {
                 
                 layout="responsive"
                 src={project1}
+                alt="pic"
               />
               <h3 className='text-lg mt-4 font-semibold  text-blue-800 dark:text-yellow-400'>Netflix-clone</h3>
               </div>
@@ -25,7 +26,7 @@ const Projects = () => {
                 height={"100%"}
                 layout="responsive"
                 src={project2}
-                
+                alt="pic"
               />
                 <h3 className='text-lg mt-4 font-semibold text-blue-800  dark:text-yellow-400'>Movie-Review</h3>
               </div>
@@ -36,6 +37,7 @@ const Projects = () => {
                 height={"100%"}
                 layout="responsive"
                 src={project3}
+                alt="pic"
               />
               
                 <h3 className='text-lg mt-4 font-semibold text-blue-800  dark:text-yellow-400'>Ecommerce</h3>
@@ -47,6 +49,7 @@ const Projects = () => {
                 height={"100%"}
                 layout="responsive"
                 src={project4}
+                alt="pic"
               />
                 <h3 className='text-lg mt-4 font-semibold text-blue-800  dark:text-yellow-400'>Food Delivery</h3>
               </div>
