@@ -6,8 +6,8 @@ import project3 from "../../../public/Assets/Ecommerce.png"
 import project4 from "../../../public/Assets/Imdb.png"
 const Projects = () => {
   return (
-    <div className=' pt-12 text-center bg-gradient-to-b from-teal-500 dark:bg-black'>
-        <h1 className='font-semibold text-3xl text-blue-500'>Projects</h1>
+    <div className=' pt-12 text-center dark:bg-black pb-16'>
+        <h1 className='font-semibold text-3xl  text-teal-400 border-b-2 border-blue-400 inline-block'>PROJECTS</h1>
     <div className="flex flex-col gap-10 py-10 px-12 lg:flex-row lg:flex-wrap text-center  ">
             <div className="w-[775px]">
               <Image

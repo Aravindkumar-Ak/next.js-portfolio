@@ -9,7 +9,7 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      display: ["Outfit"],
+      Rampart: ["Rampart One", "cursive"]
     },
     extend: {
       backgroundImage: {

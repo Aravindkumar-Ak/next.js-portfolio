@@ -1,46 +1,43 @@
-import React, { useRef, useState } from 'react'
-
-
+import React, { useRef, useState } from "react";
+import FormInfo from "./FormInfo";
+import FormModal from "./FormModal";
 
 const ContactForm = () => {
+  const [user, setUser] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
-const[user,setUser]=useState([]);
+  const username = useRef(null);
+  const text = useRef(null);
 
-  const username=useRef(null);
-const text=useRef(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-const handleSubmit=(e)=>{
-e.preventDefault();
-
-console.log(username.current.value,text.current.value);
-setUser([...user,username.current.value,text.current.value]);
-username.current.value="";
-text.current.value="";
-}
+    console.log(username.current.value, text.current.value);
+    setUser([
+      ...user,
+      { username: username.current.value, text: text.current.value },
+    ]);
+    username.current.value = "";
+    text.current.value = "";
+    setModalOpen(!modalOpen);
+  };
 
   return (
-    <div className='w-full p-12  bg-gradient-to-b from-[#a8dbca] to-[#FFD1DB]  dark:bg-black'>
-    <div className='flex flex-col justify-center items-center '>
-        <h2 className='text-center text-3xl font-sans mb-8'>Contact Form</h2>
-        <form onSubmit={(e)=> {handleSubmit(e)}}>
-        <div className="mb-4">
-      <label className="block text-gray-700 text-lg font-bold mb-2" for="username">
-      Name
-      </label>
-      <input ref={username} className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"/>
+    <div className="dark:bg-black"> 
+      <FormModal setModalOpen={setModalOpen}/>
+      {modalOpen && (
+        <>
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="flex items-center min-h-screen px-4 py-8 ">
+              <div className="relative w-full max-w-lg p-4 mx-auto bg-white rounded-md ">
+                <FormInfo handleSubmit={handleSubmit} username={username} text={text}/>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
-    <div className="mb-4">
-      <label className="block text-gray-700 text-lg font-bold mb-2" for="Textarea">
-        Textarea
-      </label>
-     
-      <textarea cols={12} rows={8} ref={text} id="Textarea" className="resize-none shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" ></textarea>
-    </div>
-    <button type='submit' className='bg-teal-300 px-8 py-1 rounded-lg text-center font-md font-semibold'>Click to contact</button>
-        </form>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
