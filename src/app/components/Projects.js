@@ -9,7 +9,7 @@ const Projects = () => {
     <div className=' pt-12 text-center dark:bg-black pb-16'>
         <h1 className='font-semibold text-3xl  text-teal-400 border-b-2 border-blue-400 inline-block'>PROJECTS</h1>
     <div className="flex flex-col gap-10 py-10 px-12 lg:flex-row lg:flex-wrap text-center  ">
-            <div className="w-[775px]">
+            <div className="basis-1/3 flex-1">
               <Image
                 className="rounded-lg object-cover"
                 
